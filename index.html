@@ -3,28 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        h1 {
-            font-size: 3rem;
-        }
-    </style>
+    <title>Aleksey Yereshchenko - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Hello, welcome to my portfolio!</h1>
-    <h2>Github test.</h2>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <h1>Aleksey Yereshchenko</h1>
+                <p>Game Developer</p>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <p><a href="mailto:aleshayy@verizon.net">aleshayy@verizon.net</a></p>
+                <p><a href="https://www.linkedin.com/in/alekseyyer">LinkedIn</a></p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <!-- About Section -->
+            <section id="about" class="about-section">
+                <div class="about-left">
+                    <h2>Aleksey Yereshchenko,</h2>
+                    <p>Hello, I'm Aleksey Yereshchenko.</p>
+                </div>
+                <div class="about-right">
+                    <img src="media/aleksey.jpg" alt="Aleksey Yereshchenko">
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="skills-section">
+                <h2>Languages and Frameworks</h2>
+                <div class="skills-tabs">
+                    <button class="tab active" data-tab="all">All</button>
+                    <button class="tab" data-tab="languages">Languages</button>
+                    <button class="tab" data-tab="game-dev">Game Development</button>
+                    <button class="tab" data-tab="web-tech">Web Technologies</button>
+                </div>
+                <div class="skills-grid" id="all">
+                    <div class="skill-item">C++</div>
+                    <div class="skill-item">C#</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">HTML</div>
+                    <div class="skill-item">CSS</div>
+                    <div class="skill-item">Unreal Engine</div>
+                    <div class="skill-item">Godot</div>
+                    <div class="skill-item">Monogame</div>
+                    <div class="skill-item">Unity</div>
+                    <div class="skill-item">Blender</div>
+                </div>
+                <div class="skills-grid" id="languages" style="display: none;">
+                    <div class="skill-item">C++</div>
+                    <div class="skill-item">C#</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Python</div>
+                </div>
+                <div class="skills-grid" id="game-dev" style="display: none;">
+                    <div class="skill-item">Unreal Engine</div>
+                    <div class="skill-item">Godot</div>
+                    <div class="skill-item">Monogame</div>
+                    <div class="skill-item">Unity</div>
+                    <div class="skill-item">Blender</div>
+                </div>
+                <div class="skills-grid" id="web-tech" style="display: none;">
+                    <div class="skill-item">HTML</div>
+                    <div class="skill-item">CSS</div>
+                    <div class="skill-item">JavaScript</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="src/script.js"></script>
 </body>
 </html>
