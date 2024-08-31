@@ -1,3 +1,4 @@
+/* Body and Container */
 body {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
@@ -5,15 +6,16 @@ body {
     color: #FFFFFF;
     display: flex;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto; /* Allow vertical scrolling */
 }
 
 .container {
     display: flex;
     width: 100%;
-    height: 100%;
+    min-height: 100vh; /* Ensure the container takes up full height */
 }
 
+/* Sidebar */
 .sidebar {
     width: 250px;
     background-color: #121212;
@@ -21,14 +23,12 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .sidebar-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   
 }
 
 .sidebar h1 {
@@ -60,6 +60,7 @@ body {
     text-decoration: underline;
 }
 
+/* Main Content */
 .content {
     flex-grow: 1;
     display: flex;
@@ -69,8 +70,10 @@ body {
     padding: 20px 50px; /* Adjusted padding to move the content up */
     box-sizing: border-box;
     background-color: #1A1A1A;
+    overflow-y: auto; /* Enable scrolling within content if needed */
 }
 
+/* About Section */
 .about-section {
     display: flex;
     align-items: center;
@@ -97,11 +100,6 @@ body {
     margin: 10px 0;
 }
 
-.highlight {
-    color: #BB86FC;
-    font-weight: bold;
-}
-
 .about-right img {
     width: 300px;
     height: auto;
@@ -109,31 +107,19 @@ body {
     background-color: #BB86FC; /* Fallback color if the image doesn't load */
 }
 
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-left, .about-right {
-        max-width: 100%;
-    }
-
-    .about-right img {
-        margin-top: 20px;
-    }
-}
-
+/* Skills Section */
 .skills-section {
     width: 100%; /* Make the skills section full width */
     max-width: 1400px; /* Optional: Set a maximum width */
     margin-top: 50px;
 }
 
-.skills-section h2 {
-    font-size: 36px;
-    color: #FFFFFF;
-    margin-bottom: 20px;
+.skills-grid-container {
+    background-color: #121212; /* Darker background color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 30px; /* Padding inside the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow for depth */
+    margin-top: 20px; /* Space between the tabs and the grid */
 }
 
 .skills-tabs {
@@ -164,19 +150,28 @@ body {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted minmax value */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ensure items are side by side */
     gap: 20px;
     width: 100%; /* Ensure the grid takes up the full width of the container */
-    max-width: 1400px; /* Optional: Set a maximum width for the grid */
 }
 
 .skill-item {
     background-color: #333;
     color: #FFFFFF;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     border-radius: 10px;
     transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-item img {
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Maintain a consistent height */
+    margin-bottom: 10px; /* Space between image and text */
 }
 
 .skill-item:hover {
@@ -184,3 +179,156 @@ body {
     color: #1A1A1A;
 }
 
+/* Experience Section */
+.experience-section {
+    width: 100%; /* Full width of the container */
+    max-width: 1400px; /* Optional: Set a maximum width */
+    margin-top: 50px; /* Space above the section */
+}
+
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px; /* Space between experience items */
+    padding: 30px;
+    background-color: #2A2A2A; /* Dark background */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.experience-left {
+    max-width: 60%; /* Limits the width of the text section */
+    color: #FFFFFF;
+}
+
+.experience-left h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.experience-left h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #BB86FC; /* Highlighted color */
+}
+
+.experience-left ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.experience-left li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.experience-right img {
+    max-width: 300px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add some depth to the image */
+}
+
+/* Projects Section */
+.projects-section {
+    width: 100%; /* Full width */
+    max-width: 1400px; /* Optional max width */
+    margin-top: 50px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust columns */
+    gap: 20px;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.project-item img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Resume Section */
+.resume-section {
+    background-color: #2A2A2A; /* Darker background */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.resume-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.resume-button {
+    background-color: #D2691E; /* Button color */
+    color: #FFFFFF;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+    background-color: #A0522D; /* Darker shade on hover */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #7e7878; /* Light background for contrast */
+    color: #333333;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-section p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.footer-icons {
+    margin: 20px 0;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left, .about-right {
+        max-width: 100%;
+    }
+
+    .about-right img {
+        margin-top: 20px;
+    }
+}
