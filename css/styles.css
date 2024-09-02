@@ -1,4 +1,5 @@
 /* Body and Container */
+
 body {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
@@ -104,7 +105,7 @@ body {
     width: 300px;
     height: auto;
     border-radius: 10px;
-    background-color: #BB86FC; /* Fallback color if the image doesn't load */
+    background-color: #527bd3; /* Fallback color if the image doesn't load */
 }
 
 /* Skills Section */
@@ -139,12 +140,12 @@ body {
 }
 
 .tab.active {
-    background-color: #BB86FC;
+    background-color: #527bd3;
     color: #1A1A1A;
 }
 
 .tab:hover {
-    background-color: #BB86FC;
+    background-color: #527bd3;
     color: #1A1A1A;
 }
 
@@ -175,7 +176,7 @@ body {
 }
 
 .skill-item:hover {
-    background-color: #BB86FC;
+    background-color: #527bd3;
     color: #1A1A1A;
 }
 
@@ -211,7 +212,7 @@ body {
 .experience-left h4 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: #BB86FC; /* Highlighted color */
+    color: #527bd3; /* Highlighted color */
 }
 
 .experience-left ul {
@@ -253,8 +254,8 @@ body {
 }
 
 .project-item img {
-    width: 100%;
-    height: auto;
+    width: 294.56px;
+    height: 165.92px;
     border-radius: 10px;
     transition: transform 0.3s;
 }
@@ -316,6 +317,23 @@ body {
     width: 30px;
     height: 30px;
 }
+.logo-link {
+    display: block; /* Ensure the logo behaves like a block element */
+    margin-bottom: 20px; /* Add some space below the logo */
+    text-align: center; /* Center the logo in the sidebar */
+}
+
+.logo-link img {
+    max-width: 100%; /* Ensure the logo fits within the sidebar */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add some rounding to the edges */
+    transition: transform 0.3s; /* Add a hover effect */
+}
+
+.logo-link img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
