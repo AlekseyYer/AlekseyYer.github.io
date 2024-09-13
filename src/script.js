@@ -1,14 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const tabs = document.querySelectorAll('.tab');
-    const grids = document.querySelectorAll('.skills-grid');
+    // Project Carousel Functionality
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const carouselSlide = document.querySelector('.carousel-slide');
+    const projects = document.querySelectorAll('.project');
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
+    let currentIndex = 0;
+    const totalProjects = projects.length;
 
-            grids.forEach(grid => grid.style.display = 'none');
-            document.getElementById(tab.getAttribute('data-tab')).style.display = 'grid';
-        });
+    function showProject(index) {
+        const slideWidth = projects[0].clientWidth;
+        carouselSlide.style.transform = `translateX(${-index * slideWidth}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalProjects; // Always loop to the beginning
+        showProject(currentIndex);
+        prevBtn.style.display = 'block'; // Ensure left arrow is visible
     });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalProjects) % totalProjects; // Loop to the last project
+        showProject(currentIndex);
+        nextBtn.style.display = 'block'; // Ensure right arrow is visible
+    });
+    
+    // Make sure arrows never disappear
+    prevBtn.style.display = 'block';
+    nextBtn.style.display = 'block';
 });

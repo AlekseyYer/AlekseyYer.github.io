@@ -1,13 +1,14 @@
 /* Body and Container */
-
 body {
     margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
     background-color: #1A1A1A;
     color: #FFFFFF;
     display: flex;
     height: 100vh;
     overflow-y: auto; /* Allow vertical scrolling */
+}
+html {
+    scroll-behavior : smooth;
 }
 
 .container {
@@ -233,36 +234,146 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add some depth to the image */
 }
 
+
 /* Projects Section */
 .projects-section {
-    width: 100%; /* Full width */
-    max-width: 1400px; /* Optional max width */
-    margin-top: 50px;
+    width: 100%; 
+    max-width: 1400px; 
+    margin: 50px auto; 
     text-align: center;
 }
 
-.projects-section h2 {
-    font-size: 36px;
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflowing projects */
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Make sure the slide takes up the full width */
+}
+
+.project {
+    min-width: 100%; /* Ensure each project takes up the full width of the carousel container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #2A2A2A;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+}
+
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.project-text {
+    width: 55%; /* Adjust width to give more space to the GIF */
+    text-align: left;
     color: #FFFFFF;
-    margin-bottom: 30px;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust columns */
-    gap: 20px;
+.project-text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #527bd3; /* Highlight color */
 }
 
-.project-item img {
-    width: 294.56px;
-    height: 165.92px;
+.project-text p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.project-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    color: #BBBBBB;
+    font-size: 18px;
+}
+
+.project-gif {
+    width: 40%;
+    text-align: right;
+}
+
+.project-gif img {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.project-item img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+/* Carousel Button Styles */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #527bd3;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    z-index: 10; /* Ensure buttons are above the project content */
 }
+
+#prev {
+    left: -30px; /* Move the left arrow outside the project container */
+}
+
+#next {
+    right: -0px; /* Move the right arrow outside the project container */
+}
+
+.carousel-btn:hover {
+    background-color: #1A1A1A;
+}
+
+.carousel-btn:focus {
+    outline: none;
+}
+
+/* Make sure arrows are always visible */
+.carousel-btn {
+    display: block;
+}
+
+/* Ensure projects don't overlap when resizing */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Stack project text and GIF vertically */
+        text-align: center;
+    }
+
+    .project-text, .project-gif {
+        width: 100%;
+    }
+
+    .project-gif {
+        margin-top: 20px;
+    }
+
+    .carousel-btn {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+
+
 
 /* Resume Section */
 .resume-section {

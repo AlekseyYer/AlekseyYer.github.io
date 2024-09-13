@@ -35,7 +35,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veniam, maiores atque nulla placeat voluptatem aut similique dolores voluptates velit fugiat, eius culpa ea rem repellendus expedita praesentium quis consequuntur..</p>
                 </div>
                 <div class="about-right">
-                    <img src="media/aleksey.jpg" alt="Aleksey Yereshchenko">
+                    <img src="media/alekseyy.jpg" alt="Aleksey Yereshchenko">
                 </div>
             </section>
 
@@ -168,25 +168,99 @@
             <img src="media/another-experience-image.gif" alt="Another Experience GIF">
         </div>
     </div>
-    <!-- Projects Section -->
+
+<!-- Projects Section (Carousel) -->
 <section id="projects" class="projects-section">
-    <h2>All Projects</h2>
-    <div class="projects-grid">
-        <a href="project1.html" class="project-item">
-            <img src="media/gifs/fruitslicer.gif"  alt="Project 1">
-        </a>
-        <a href="project2.html" class="project-item">
-            <img src="media/gifs/changeling.gif" alt="Project 2">
-        </a>
-        <a href="project3.html" class="project-item">
-            <img src="media/project3.gif" alt="Project 3">
-        </a>
-        <a href="project4.html" class="project-item">
-            <img src="media/project4.gif" alt="Project 4">
-        </a>
-        <!-- Add more project items as needed -->
+    <h2>Projects</h2>
+    <div class="carousel-container">
+        <button id="prev" class="carousel-btn">←</button>
+        
+        <div class="carousel-slide">
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Simple Shooter (C++, UE5, VSCode)</h3>
+                        <p>A fast-paced third-person shooter where players take on AI enemies in a futuristic setting.</p>
+                        <ul>
+                            <li>Developed enemy AI behaviors and integrated scripted actions using C++ in Unreal Engine 5.</li>
+                            <li>Managed game states, shooting mechanics, and implemented visual and sound effects for a polished experience.</li>
+                        </ul>
+                    </div>
+                    <div class="project-gif">
+                        <img src="media/gifs/shooter.gif" alt="Simple Shooter Gameplay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Toon Tanks (C++, UE5, VSCode)</h3>
+                        <p>A tank-battle game where players control tanks to defeat enemies in a dynamic environment.</p>
+                        <ul>
+                            <li>Utilized Unreal Engine 5’s Actor class for object management and developed collision detection.</li>
+                            <li>Created enemy AI using conditional logic, improving gameplay interaction and dynamics.</li>
+                        </ul>
+                    </div>
+                    <div class="project-gif">
+                        <img src="media/gifs/tanks.gif" alt="Toon Tanks Gameplay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Holy Moly (C#, Monogame, Visual Studio)</h3>
+                        <p>A fun platformer where players must navigate underground levels, avoiding enemies and solving puzzles.</p>
+                        <ul>
+                            <li>Built using MonoGame with C#, implemented a dynamic audio system, and programmed unique enemy behaviors.</li>
+                            <li>Managed project timelines using Trello, and collaborated through Discord and Slack.</li>
+                        </ul>
+                    </div>
+                    <div class="project-gif">
+                        <img src="media/gifs/holymoly.gif" alt="Holy Moly Gameplay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Crypt Raider (C++, UE5, VSCode)</h3>
+                        <p>A puzzle-adventure game set in an ancient temple where players solve traps and puzzles to progress.</p>
+                        <ul>
+                            <li>Built using Unreal Engine 5, enhanced lighting using Lumen, and designed collision systems using C++.</li>
+                            <li>Focused on creating an immersive environment through dynamic effects.</li>
+                        </ul>
+                    </div>
+                    <div class="project-gif">
+                        <img src="media/gifs/temple.gif" alt="Crypt Raider Gameplay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <div class="project-text">
+                        <h3>Portfolio Page (HTML, CSS, JavaScript)</h3>
+                        <p>This is the page you're viewing right now—a personal portfolio built to showcase my projects and skills.</p>
+                        <ul>
+                            <li>Designed with a clean, responsive layout using HTML, CSS, and JavaScript for dynamic functionality.</li>
+                            <li>Implemented a carousel to navigate through projects and created smooth transitions between sections.</li>
+                        </ul>
+                    </div>
+                    <div class="project-gif">
+                        <img src="media/gifs/logo.png" alt="Portfolio Page Preview">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="next" class="carousel-btn">→</button>
     </div>
 </section>
+
 
 
 </section>
@@ -202,7 +276,6 @@
     <div class="footer-icons">
         <a href="mailto:your.email@example.com"><img src="media/email-icon.png" alt="Email"></a>
         <a href="https://www.linkedin.com/in/your-profile" target="_blank"><img src="media/linkedin-icon.png" alt="LinkedIn"></a>
-        <a href="https://www.instagram.com/your-profile" target="_blank"><img src="media/instagram-icon.png" alt="Instagram"></a>
     </div>
     <p>your.email@example.com</p>
 </footer>
