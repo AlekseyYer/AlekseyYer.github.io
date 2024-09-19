@@ -376,6 +376,7 @@ section {
     padding: 30px;
     border-radius: 10px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .project-content {
@@ -389,6 +390,7 @@ section {
     flex: 1;
     color: #ffffff;
     min-width: 300px;
+    padding-left: 150px;
 }
 
 .project-text h3 {
@@ -421,6 +423,7 @@ section {
     display: block;
     border-radius: 10px;
     transition: transform 0.3s;
+    padding-right:50px;
 }
 
 .project-gif img:hover {
@@ -640,4 +643,11 @@ section {
         width: 30px;
         height: 30px;
     }
+    .project-gif img{
+        padding-right: 0px;
+    }
+    .project-text {
+        padding-left: 0px;   
+    }
+
 }
