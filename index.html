@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksey Yereshchenko - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Aleksey Yereshchenko | Developer</title>
+        <!-- Meta tags for responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google Fonts for custom typography -->
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+        <!-- Link to the updated CSS file -->
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- Font Awesome Kit -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <link rel="icon" type="image/png" href="media/favicon-32x32.png">
+        <link rel="icon" type="image/png" href="media/favicon-16x16.png">
+        
+    </head>
+    
 <body>
+    <!-- Responsive Navigation -->
+    <header class="header">
+        <a href="#" class="logo-link">
+            <img src="media/gifs/logo.png" alt="Aleksey Yereshchenko Logo">
+        </a>
+        <!-- Hamburger Menu Underneath the Logo -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#resume" onclick="toggleMenu()">Resume</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
+        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-content">
                 <a href="#" class="logo-link">
@@ -18,21 +52,24 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#experience">Experience</a></li>
-                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#resume">Resume</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <p><a href="mailto:aleshayy@verizon.net">aleshayy@verizon.net</a></p>
-                <p><a href="https://www.linkedin.com/in/alekseyyer">LinkedIn</a></p>
+                <p><a href="https://www.linkedin.com/in/alekseyyer" target="_blank">            <i class="fa-brands fa-linkedin fa-lg" style="color: #0077ff;"></i>
+                </a></p>
             </div>
         </aside>
 
+        <!-- Main Content -->
         <main class="content">
             <!-- About Section -->
             <section id="about" class="about-section">
                 <div class="about-left">
-                    <h2>Aleksey Yereshchenko,</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veniam, maiores atque nulla placeat voluptatem aut similique dolores voluptates velit fugiat, eius culpa ea rem repellendus expedita praesentium quis consequuntur..</p>
+                    <h2>Hi! I'm Aleksey</h2>
+                    <p> I'm a developer and student in my final semester at RIT.</p>
                 </div>
                 <div class="about-right">
                     <img src="media/alekseyy.jpg" alt="Aleksey Yereshchenko">
@@ -49,7 +86,9 @@
                     <button class="tab" data-tab="web-tech">Web Technologies</button>
                 </div>
                 <div class="skills-grid-container">
+                    <!-- All Skills -->
                     <div class="skills-grid" id="all">
+                        <!-- Skill Items -->
                         <div class="skill-item">
                             <img src="media/Icons/C++.png" alt="C++">
                             C++
@@ -91,6 +130,7 @@
                             SQL
                         </div>
                     </div>
+                    <!-- Languages Skills -->
                     <div class="skills-grid" id="languages" style="display: none;">
                         <div class="skill-item">
                             <img src="media/Icons/C++.png" alt="C++">
@@ -109,6 +149,7 @@
                             Python
                         </div>
                     </div>
+                    <!-- Game Development Skills -->
                     <div class="skills-grid" id="game-dev" style="display: none;">
                         <div class="skill-item">
                             <img src="media/Icons/unrealengine.png" alt="Unreal Engine">
@@ -123,6 +164,7 @@
                             Unity
                         </div>
                     </div>
+                    <!-- Web Technologies Skills -->
                     <div class="skills-grid" id="web-tech" style="display: none;">
                         <div class="skill-item">
                             <img src="media/Icons/HTML.png" alt="HTML">
@@ -139,150 +181,173 @@
                     </div>
                 </div>
             </section>
-<!-- Experience Section -->
-<section id="experience" class="experience-section">
-    <h2>Experience</h2>
-    <div class="experience-item">
-        <div class="experience-left">
-            <h3><img src="media/changelinglogo.png" width = "200" height = "60" alt="C#"></h3>
-            <h4>Game Development Intern</h4>
-            <ul>
-                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, earum laborum quidem dicta, tempora autem dignissimos inventore praesentium laboriosam possimus iusto omnis nemo deleniti? Nam sunt velit aliquid obcaecati ex.</li>
-            </ul>
-        </div>
-        <div class="experience-right">
-            <img src="media/experience-image.gif" alt="Experience GIF">
-        </div>
+
+            <!-- Experience Section -->
+            <section id="experience" class="experience-section">
+                <h2>Experience</h2>
+                <!-- Experience Item 1 -->
+                <div class="experience-item">
+                    <div class="experience-left">
+                        <h3><img src="media/changelinglogo.png" alt="ChangelingVR Logo"></h3>
+                        <h4>Game Developer - ChangelingVR, Xana Ad Hoc Studio, Rochester, NY (May 2023 – Aug 2023)</h4>
+                        <ul>
+                            <li>Collaborated in an Agile team to address bug fixes and implement code changes in Unreal Engine 4, contributing to the enhancement of our virtual reality game, ChangelingVR.</li>
+                            <li>Played a key role in developing the player UI by writing and implementing new features and enhancements.</li>
+                            <li>Managed task priorities effectively using tools like ClickUp and Perforce to align with project deadlines and team goals.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-right">
+                        <img src="media/gifs/changeling.gif" alt="ChangelingVR Gameplay">
+                    </div>
+                </div>
+                <!-- Experience Item 2 -->
+                <div class="experience-item">
+                    <div class="experience-left">
+                        <h3><img src="media/pldevlogo.png" alt="PL Developments Logo"></h3>
+                        <h4>IT Intern - PL Developments, Long Island, NY (May 2024 – Aug 2024)</h4>
+                        <ul>
+                            <li>Developed a sales forecasting model using Prophet in Python, integrating SQL for data management, significantly enhancing the accuracy of sales predictions and informing strategic decisions.</li>
+                            <li>Created comprehensive documentation and mapping of office networking and frequently utilized devices, streamlining device management and network troubleshooting across the company.</li>
+                            <li>Supported routine IT operations and network device installations using Vorex and KaseyaOne, ensuring stable network performance and high user satisfaction.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-right">
+                        <img src="media/pldresize.jpg" alt="PL Developments">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section">
+                <h2>Projects</h2>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <!-- Project 1 -->
+                        <div class="project">
+                            <div class="project-content">
+                                <div class="project-text">
+                                    <h3>Simple Shooter (C++, UE5, VSCode)</h3>
+                                    <p>A fast-paced third-person shooter where players take on AI enemies in a futuristic setting.</p>
+                                    <ul>
+                                        <li>Developed enemy AI behaviors and integrated scripted actions using C++ in Unreal Engine 5.</li>
+                                        <li>Managed game states, shooting mechanics, and implemented visual and sound effects for a polished experience.</li>
+                                    </ul>
+                                </div>
+                                <div class="project-gif">
+                                    <img src="media/gifs/shooter.gif" alt="Simple Shooter Gameplay">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="project">
+                            <div class="project-content">
+                                <div class="project-text">
+                                    <h3>Toon Tanks (C++, UE5, VSCode)</h3>
+                                    <p>A tank battle game where players control tanks and face off against AI turrets in dynamic environments.</p>
+                                    <ul>
+                                        <li>Engineered AI turret behaviors and implemented movement, health systems, and collision detection in Unreal Engine 5.</li>
+                                        <li>Integrated real-time audio and particle effects, and managed game state transitions with HUD updates.</li>
+                                    </ul>
+                                </div>
+                                <div class="project-gif">
+                                    <img src="media/gifs/tanks.gif" alt="Toon Tanks Gameplay">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="project">
+                            <div class="project-content">
+                                <div class="project-text">
+                                    <h3>Holy Moly (C#, Monogame, Visual Studio)</h3>
+                                    <p>A fun platformer where players must navigate underground levels, avoiding enemies and solving puzzles.</p>
+                                    <ul>
+                                        <li>Built using MonoGame with C#, implemented a dynamic audio system, and programmed unique enemy behaviors.</li>
+                                        <li>Managed project timelines using Trello, and collaborated through Discord and Slack.</li>
+                                    </ul>
+                                </div>
+                                <div class="project-gif">
+                                    <img src="media/gifs/holymoly.gif" alt="Holy Moly Gameplay">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 4 -->
+                        <div class="project">
+                            <div class="project-content">
+                                <div class="project-text">
+                                    <h3>Crypt Raider (C++, UE5, VSCode)</h3>
+                                    <p>A puzzle-adventure game set in an ancient temple where players solve traps and puzzles to progress.</p>
+                                    <ul>
+                                        <li>Built using Unreal Engine 5, enhanced lighting using Lumen, and designed collision systems using C++.</li>
+                                        <li>Focused on creating an immersive environment through dynamic effects.</li>
+                                    </ul>
+                                </div>
+                                <div class="project-gif">
+                                    <img src="media/gifs/temple.gif" alt="Crypt Raider Gameplay">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 5 -->
+                        <div class="project">
+                            <div class="project-content">
+                                <div class="project-text">
+                                    <h3>Portfolio Page (HTML, CSS, JavaScript)</h3>
+                                    <p>This is the page you're viewing right now—a personal portfolio built to showcase my projects and skills.</p>
+                                    <ul>
+                                        <li>Designed with a clean, responsive layout using HTML, CSS, and JavaScript for dynamic functionality.</li>
+                                        <li>Implemented a carousel to navigate through projects and created smooth transitions between sections.</li>
+                                    </ul>
+                                </div>
+                                <div class="project-gif">
+                                    <img src="media/gifs/logo.png" alt="Portfolio Page Preview">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Moved the buttons outside the content area -->
+                    <button id="prev" class="carousel-btn">←</button>
+                    <button id="next" class="carousel-btn">→</button>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume" class="resume-section">
+                <h2>Resume</h2>
+                <a href="media/AlekseyY_Resume.pdf" class="resume-button" target="_blank">Read Resume</a>
+            </section>
+
+          <!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me!</p>
+    <div class="contact-icons">
+        <!-- Email Icon -->
+        <a href="mailto:aleshayy@verizon.net">
+            <i class="fas fa-envelope" style = "color: #0077ff;"></i>
+        </a>
+        <!-- LinkedIn Icon -->
+        <a href="https://www.linkedin.com/in/alekseyyer" target="_blank">
+            <i class="fa-brands fa-linkedin fa-lg" style="color: #0077ff;"></i>
+
+        </a>
+        <!-- GitHub Icon (Optional) -->
+        <a href="https://github.com/AlekseyYer" target="_blank">
+            <i class="fa-brands fa-github" style = "color: #0077ff;"></i>
+          
+        </a>
     </div>
-
-    <div class="experience-item">
-        <div class="experience-left">
-            <h3><img src="media/pldevlogo.png" alt="C#"></h3>
-            <h4>Information Technology Intern</h4>
-            <ul>
-                <li>Description of responsibilities and achievements.</li>
-                <li>Additional points can go here.</li>
-            </ul>
-        </div>
-        <div class="experience-right">
-            <img src="media/another-experience-image.gif" alt="Another Experience GIF">
-        </div>
-    </div>
-
-<!-- Projects Section (Carousel) -->
-<section id="projects" class="projects-section">
-    <h2>Projects</h2>
-    <div class="carousel-container">
-        <button id="prev" class="carousel-btn">←</button>
-        
-        <div class="carousel-slide">
-            <div class="project">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Simple Shooter (C++, UE5, VSCode)</h3>
-                        <p>A fast-paced third-person shooter where players take on AI enemies in a futuristic setting.</p>
-                        <ul>
-                            <li>Developed enemy AI behaviors and integrated scripted actions using C++ in Unreal Engine 5.</li>
-                            <li>Managed game states, shooting mechanics, and implemented visual and sound effects for a polished experience.</li>
-                        </ul>
-                    </div>
-                    <div class="project-gif">
-                        <img src="media/gifs/shooter.gif" alt="Simple Shooter Gameplay">
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Toon Tanks (C++, UE5, VSCode)</h3>
-                        <p>A tank-battle game where players control tanks to defeat enemies in a dynamic environment.</p>
-                        <ul>
-                            <li>Utilized Unreal Engine 5’s Actor class for object management and developed collision detection.</li>
-                            <li>Created enemy AI using conditional logic, improving gameplay interaction and dynamics.</li>
-                        </ul>
-                    </div>
-                    <div class="project-gif">
-                        <img src="media/gifs/tanks.gif" alt="Toon Tanks Gameplay">
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Holy Moly (C#, Monogame, Visual Studio)</h3>
-                        <p>A fun platformer where players must navigate underground levels, avoiding enemies and solving puzzles.</p>
-                        <ul>
-                            <li>Built using MonoGame with C#, implemented a dynamic audio system, and programmed unique enemy behaviors.</li>
-                            <li>Managed project timelines using Trello, and collaborated through Discord and Slack.</li>
-                        </ul>
-                    </div>
-                    <div class="project-gif">
-                        <img src="media/gifs/holymoly.gif" alt="Holy Moly Gameplay">
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Crypt Raider (C++, UE5, VSCode)</h3>
-                        <p>A puzzle-adventure game set in an ancient temple where players solve traps and puzzles to progress.</p>
-                        <ul>
-                            <li>Built using Unreal Engine 5, enhanced lighting using Lumen, and designed collision systems using C++.</li>
-                            <li>Focused on creating an immersive environment through dynamic effects.</li>
-                        </ul>
-                    </div>
-                    <div class="project-gif">
-                        <img src="media/gifs/temple.gif" alt="Crypt Raider Gameplay">
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Portfolio Page (HTML, CSS, JavaScript)</h3>
-                        <p>This is the page you're viewing right now—a personal portfolio built to showcase my projects and skills.</p>
-                        <ul>
-                            <li>Designed with a clean, responsive layout using HTML, CSS, and JavaScript for dynamic functionality.</li>
-                            <li>Implemented a carousel to navigate through projects and created smooth transitions between sections.</li>
-                        </ul>
-                    </div>
-                    <div class="project-gif">
-                        <img src="media/gifs/logo.png" alt="Portfolio Page Preview">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <button id="next" class="carousel-btn">→</button>
-    </div>
+    <p>aleshayy@verizon.net</p>
 </section>
 
-
-
-</section>
-<!-- Resume Section -->
-<section id="resume" class="resume-section">
-    <h2>RESUME</h2>
-    <a href="path/to/your/resume.pdf" class="resume-button" target="_blank">READ RESUME</a>
-</section>
-
-<!-- Footer Section -->
-<footer class="footer-section">
-    <p>Thank you for visiting!</p>
-    <div class="footer-icons">
-        <a href="mailto:your.email@example.com"><img src="media/email-icon.png" alt="Email"></a>
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank"><img src="media/linkedin-icon.png" alt="LinkedIn"></a>
+            <!-- Footer Section -->
+            <footer class="footer-section">
+                <p>Thank you for visiting!</p>
+                <p>&copy; 2024 Aleksey Yereshchenko</p>
+            </footer>
+        </main>
     </div>
-    <p>your.email@example.com</p>
-</footer>
 
-</main>
-</div>
-
-<script src="src/script.js"></script>
+    <!-- Link to the updated JavaScript file -->
+    <script src="src/script.js"></script>
+    
 </body>
 </html>
