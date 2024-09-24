@@ -175,6 +175,7 @@ section {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    
 }
 
 .about-left {
@@ -191,7 +192,10 @@ section {
 }
 
 .about-left p {
-    font-size: 18px;
+    /* Adjust the value as needed */
+  font-size:26px;
+  padding-left: 700px;
+  text-align: right;
 }
 
 .about-right {
@@ -541,7 +545,11 @@ section {
         transform: rotate(360deg);
     }
 }
-
+@media (max-width: 2400px) {
+    .about-left p{
+        padding-left: 0%;
+    }
+}
 /* Responsive Design */
 @media (max-width: 992px) {
     /* Hide the sidebar */
@@ -570,6 +578,9 @@ section {
 
     .about-left {
         order: 2;
+    }
+    .about-left p{
+        text-align: center;
     }
 
     .about-right {
@@ -617,6 +628,7 @@ section {
 
     .about-left p {
         font-size: 16px;
+        text-align:center;
     }
 
     .skills-section h2,
