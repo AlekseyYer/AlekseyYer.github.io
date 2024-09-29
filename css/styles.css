@@ -45,16 +45,60 @@ body {
     cursor: pointer;
     margin-bottom: 10px;
 }
+.hamburger {
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    z-index: 1001;
+}
+
+.hamburger span {
+    background: #ffffff;
+    position: absolute;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 4px;
+    left: 0;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 20px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
 
 .header .nav {
-    display: none; /* Hidden by default, toggled by hamburger */
-    flex-direction: column;
-    background-color: #1a1a1a;
-    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
 }
 
 .header .nav.active {
-    display: flex;
+    max-height: 500px; /* Adjust this value as needed */
 }
 
 .header .nav ul {
@@ -595,7 +639,10 @@ section {
 
     /* Adjust Skills Grid */
     .skill-item {
-        width: 45%;
+        width: 30%; /* Approximately three items per row */
+        padding: 12px;
+        font-size: 14px;
+        text-align: left;
     }
 
     /* Adjust Experience and Project Sections */
@@ -641,7 +688,15 @@ section {
     }
 
     .skill-item {
-        width: 100%;
+        width: 35%; /* Approximately two items per row */
+        padding: 10px;
+        margin: 5px;
+        font-size: 12px;
+        text-align: left;
+    }
+    .skill-item img {
+        height: 30px; /* Reduce image size */
+        margin-bottom: 5px;
     }
 
     .tab {

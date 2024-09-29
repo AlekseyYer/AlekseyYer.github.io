@@ -22,6 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
         showProject(currentIndex);
     });
 
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.header .nav');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
     // Skills Tabs Functionality
     const tabs = document.querySelectorAll('.tab');
     const skillsGrids = document.querySelectorAll('.skills-grid');
@@ -48,3 +56,4 @@ function toggleMenu() {
     const navMenu = document.querySelector('.header .nav');
     navMenu.classList.toggle('active');
 }
+
